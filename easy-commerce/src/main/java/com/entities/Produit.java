@@ -13,6 +13,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import javax.validation.constraints.Size;
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -34,7 +35,7 @@ public class Produit implements Serializable {
     private int quantite;
     
     @ManyToOne
-    @JoinColumn(name="FK_CATEGORIE")
+    @JoinColumn(name="FK_idCategorie")
     private Categorie categorie;
 
     public Produit() {
