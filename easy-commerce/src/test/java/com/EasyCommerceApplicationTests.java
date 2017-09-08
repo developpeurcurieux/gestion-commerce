@@ -11,6 +11,7 @@ public class EasyCommerceApplicationTests {
 
 	@Test
 	public void contextLoads() {
+          
 	}
 
 }
