@@ -6,12 +6,11 @@
 
 package com.dao;
 
+import com.entities.LigneCommande;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
 
-public interface IComandeRepository extends JpaRepository {
-    
-    
+public interface ILigneCommandeRepository extends JpaRepository<LigneCommande, Long> {
 
 }

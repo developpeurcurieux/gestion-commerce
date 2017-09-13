@@ -19,13 +19,13 @@ public interface IProduitRepository extends JpaRepository<Produit, Long>{
 //     @Query("SELECT e From Entreprise e WHERE e.nom like :x")
 //    public Page<Entreprise> chercher(@Param("x") String e, Pageable pageable); 
     
-    @Query("SELECT p FROM produit p WHERE p.designation like :x or p.description like :x")
+    @Query("SELECT p FROM Produit p WHERE p.designation like :x or p.description like :x")
     public List<Produit> produitsParMotCle(@Param("x") String mc);
         
-    @Query("SELECT p FROM produit WHERE p.categorie.idcategorie = :x")
+    @Query("SELECT p FROM Produit p WHERE p.categorie.idCategorie = :x")
     public List<Produit> produitsParCategories(@Param("x") Long idCategorie);
     
-    @Query("SELECT p FROM produit WHERE p.selected = true")
+    @Query("SELECT p FROM Produit p WHERE p.selected = TRUE")
     public List<Produit> produitsSelectionnes();
     
 }

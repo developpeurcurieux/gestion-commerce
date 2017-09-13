@@ -6,11 +6,13 @@
 
 package com.dao;
 
-import com.entities.User;
+import com.entities.Commande;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
 
-public interface IUserRepository extends JpaRepository<User, Long> {
+public interface ICommandeRepository extends JpaRepository <Commande, Long>{
     
+    
+
 }
